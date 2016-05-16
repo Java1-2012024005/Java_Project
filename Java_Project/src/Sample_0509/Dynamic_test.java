@@ -10,6 +10,7 @@ abstract class Animal1
 class Dog extends Animal1
 {
 	private int d=1;
+	@Override
 	void sound()
 	{
 		System.out.println("¸Û¸Û"+d);
@@ -18,6 +19,7 @@ class Dog extends Animal1
 
 class Cat extends Animal1
 {
+	@Override
 	void sound()
 	{
 		System.out.println("¾ß¿ë");
@@ -32,7 +34,7 @@ public class Dynamic_test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Animal1 animal1 = new Animal1();
+		Animal1 animal1 = new Animal1;
 		Dog dog = new Dog();
 		Cat cat = new Cat();
 		
@@ -46,8 +48,10 @@ public class Dynamic_test {
 		
 		obj = cat;
 		obj.sound();
+		
+		test(dog); test(cat);
 	}
-	static void test(Animal temp)
+	static void test(Animal1 temp)
 	{
 		temp.sound();
 	}
